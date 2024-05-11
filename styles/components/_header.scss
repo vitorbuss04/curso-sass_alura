@@ -1,0 +1,84 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+@use '../components/root';
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: variaveis.$gradiente-primario;
+    padding: 2rem;
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1.6rem;
+
+        
+
+        .linha {
+            width: 90vw;
+            border-top: 1px solid black;
+        }
+
+        ul {
+            display: inline-flex;
+            justify-content: space-between;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style-type: none;
+                
+                a {
+                    text-decoration: none;
+                    @include mixins.ff-fs-fw-c(variaveis.$ft-textos, 1rem, 500, variaveis.$cor-primaria);
+                }
+            }
+
+            
+        }
+    }
+
+    #home {
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        @include mixins.margem-central(90%);
+        margin-top: 2rem;
+        justify-content: space-evenly;
+
+        .textos-home {
+            max-width: 464px;
+            h1 {
+                @include mixins.ff-fs-fw-c(variaveis.$ft-titulos, 42px, 400, variaveis.$cor-primaria);
+                line-height: 62px;
+
+                span {
+                    @include mixins.ff-fs-fw-c(variaveis.$ft-titulos, 42px,400, variaveis.$cor-secundaria);
+                }
+            }
+
+            .btn-main {
+                padding: 18px;
+                border: none;
+                border-radius: 100px;
+                background-color: variaveis.$cor-secundaria;
+                @include mixins.ff-fs-fw-c(variaveis.$ft-textos, 1rem, 600, #fff);
+                width: 220px;
+                cursor: pointer;
+            }
+        }
+
+        .img-home {
+            img {
+                max-width: 474px;
+            }
+        }
+    }
+}

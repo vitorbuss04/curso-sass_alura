@@ -1,0 +1,14 @@
+@use './fontes-importadas';
+
+// varáveis
+    //cores
+    $cor-primaria: #0C0421;
+    $cor-secundaria: #4E75FF;
+    $cor-terciaria: #85A0FF;
+    $cor-quartenaria: #CAD4FA;
+    $cor-default: #e0f8a2;
+    $gradiente-primario: linear-gradient(180deg, #e0f8a2 0%, #fff 96.87%);
+    $gradiente-secundario: linear-gradient(180deg, #ffffffb3 0%, #cad4fa4d 100%);
+    //fontes
+    $ft-textos: 'Montserrat', sans-serif;
+    $ft-titulos: 'Krona One', sans-serif;

@@ -1,0 +1,56 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+@use '../components/root';
+
+#desconto {
+    display: inline-flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    width: 100%;
+
+
+    .desconto-form {
+        text-align: center;
+        display: inline-flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h4{
+            @include mixins.ff-fs-fw-c(variaveis.$ft-titulos, 30px, 400, variaveis.$cor-primaria);
+            margin: 10px 0;
+        }
+
+        p {
+            @include mixins.ff-fs-fw-c(variaveis.$ft-textos, 20px, 400, variaveis.$cor-primaria);
+            margin: 10px 0 20px 0;
+
+        }
+
+        .input-btn {
+            border: 1px solid variaveis.$cor-terciaria;
+            width: 80%;
+            display: flex;
+            border-radius: 50px;
+
+            input {
+                width: 65%;
+                border-radius: 50px 0 0 50px;
+            }
+
+            button {
+                width: 35%;
+                border-radius: 0 50px 50px 0;
+                background-color: variaveis.$cor-secundaria;
+                @include mixins.ff-fs-fw-c(variaveis.$ft-textos, 20px, 600, #fff);
+
+            }
+
+            input, button {
+                border: none;
+                padding: 16px;
+            }
+        }
+    }
+}

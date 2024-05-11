@@ -1,0 +1,16 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+@use '../components/root';
+
+footer {
+    height: 70px;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: variaveis.$gradiente-primario;
+
+    small {
+        @include mixins.ff-fs-fw-c(variaveis.$ft-textos, 15px, 400, variaveis.$cor-primaria);
+    }
+}
